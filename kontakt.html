@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt &amp; Öffnungszeiten — Salt.</title>
+<meta name="description" content="Kontakt &amp; Öffnungszeiten — Salt. — Blücherstraße 53, 40477 Düsseldorf.">
+<meta property="og:title" content="Kontakt &amp; Öffnungszeiten — Salt.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=202609052036">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<div class="cookie-banner" id="cookie-banner" hidden>
+  <p class="cookie-banner-text">
+    Wir verwenden nur technisch notwendige Cookies bzw. lokale Speicherung auf Ihrem Gerät — unter anderem, um diese Auswahl zu merken. Mehr dazu in unserer
+    <a href="datenschutz.html">Datenschutzerklärung</a>.
+  </p>
+  <div class="cookie-banner-actions">
+    <button type="button" class="btn btn-line" id="cookie-decline">Ablehnen</button>
+    <button type="button" class="btn btn-solid" id="cookie-accept">Akzeptieren</button>
+  </div>
+</div>
+<a class="phone-fab" href="tel:+4915566310076" aria-label="Anrufen — +49 155 66310076">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 10.8a9 9 0 0 0 4.6 4.6l1.5-1.8a1 1 0 0 1 1.1-.3c1 .3 2 .5 3.1.5a1 1 0 0 1 1 1V18a1 1 0 0 1-1 1C10.4 19 3 11.6 3 3a1 1 0 0 1 1-1h3.9a1 1 0 0 1 1 1c0 1.1.2 2.1.5 3.1a1 1 0 0 1-.3 1.1z"/></svg>
+  <span class="phone-fab-label">Anrufen</span>
+</a>
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand-logo" href="index.html"><img src="assets/logo.svg" alt="Salt."></a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="menu.html">Menü</a></li>
+        <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+        <li><a href="reservierung.html">Reservierung</a></li>
+        
+      </ul>
+    </nav>
+    
+    
+    <button class="nav-toggle" aria-expanded="false" aria-label="Menü öffnen">&#9776;</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero" style="padding-bottom:0;">
+    <div class="container-narrow" style="text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">Vorbeikommen oder schreiben</div>
+      <h1>Kontakt & <em>Öffnungszeiten</em></h1>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <div class="split" style="align-items:start;">
+
+        <div style="display:grid; gap:24px;">
+          <div class="info-card reveal">
+            <h3 style="font-size:1.05rem; margin-bottom:16px;">Adresse</h3>
+            <address style="font-style:normal; color:var(--ink-dim); margin-bottom:10px;">
+              Blücherstraße 53<br>40477 Düsseldorf
+            </address>
+            <p style="margin-bottom:22px;">
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Salt.%20Bl%C3%BCcherstra%C3%9Fe%2053%2040477%20D%C3%BCsseldorf" target="_blank" rel="noopener" class="link-accent" style="font-size:0.9rem;">Route auf Google Maps planen →</a>
+            </p>
+
+            <h3 style="font-size:1.05rem; margin-bottom:10px;">Telefon</h3>
+            <p style="margin-bottom:22px;"><a href="tel:+4915566310076" class="link-accent">+49 155 66310076</a></p>
+
+            <h3 style="font-size:1.05rem; margin-bottom:10px;">Öffnungszeiten</h3>
+            <ul class="info-list">
+              <li><span>Montag</span><span>Geschlossen</span></li>
+              <li><span>Dienstag – Donnerstag</span><span>17:30 – 00:00 Uhr</span></li>
+              <li><span>Freitag – Samstag</span><span>17:30 – 01:00 Uhr</span></li>
+              <li><span>Sonntag</span><span>17:30 – 00:00 Uhr</span></li>
+              
+            </ul>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:22px; flex-wrap:wrap; gap:10px;">
+              
+              <span style="color:var(--ink-dim); font-size:0.9rem;">20–70 € pro Person</span>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="form-card reveal">
+          <h2 style="font-size:1.3rem;">Nachricht senden</h2>
+          <form id="contact-form" novalidate>
+            <div class="field">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" name="contact-name" placeholder="Ihr Name" required>
+              <div class="field-error" data-error-for="contact-name"></div>
+            </div>
+            <div class="field">
+              <label for="contact-email">E-Mail</label>
+              <input type="email" id="contact-email" name="contact-email" placeholder="ihre@email.de" required>
+              <div class="field-error" data-error-for="contact-email"></div>
+            </div>
+            <div class="field">
+              <label for="contact-message">Nachricht</label>
+              <textarea id="contact-message" name="contact-message" placeholder="Ihre Nachricht an uns" required></textarea>
+              <div class="field-error" data-error-for="contact-message"></div>
+            </div>
+            <button type="submit" class="btn btn-solid" style="width:100%;">Nachricht senden</button>
+          </form>
+          <p class="form-note">Demo — es wird aktuell keine Nachricht tatsächlich versendet.</p>
+          <div class="confirmation" id="contact-confirmation" role="status"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand-logo" href="index.html"><img src="assets/logo.svg" alt="Salt."></a>
+        <p style="margin-top:18px; max-width:32ch;">Mediterrane Küche</p>
+        
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="menu.html">Menü</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="reservierung.html">Reservierung</a></li>
+          
+        </ul>
+      </div>
+      <div>
+        <h4>Besuch</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Salt.%20Bl%C3%BCcherstra%C3%9Fe%2053%2040477%20D%C3%BCsseldorf" target="_blank" rel="noopener">Blücherstraße 53, 40477 Düsseldorf</a></li>
+          
+          <li>20–70 € pro Person</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Salt. — Konzept-Demo, nicht die offizielle Website.</span>
+      <span><a href="datenschutz.html">Datenschutz</a> · <a href="impressum.html">Impressum</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>window.SITE_I18N = {"msgRequired":"Dieses Feld wird benötigt.","msgInvalidEmail":"Bitte eine gültige E-Mail-Adresse eingeben.","contactConfirmTpl":"Danke, {name}. Ihre Nachricht wurde erfasst. Demo — es wird aktuell nichts versendet.","reservationConfirmTpl":"Danke, {name}. Reservierungsanfrage für {guests} Personen am {date} um {time} Uhr erfasst. Demo — es wird aktuell nichts versendet."};</script>
+<script src="script.js?v=202609052036"></script>
+<script type="module" src="components/index.js"></script>
+
+</body>
+</html>
