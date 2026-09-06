@@ -233,6 +233,22 @@ nav.main-nav a[aria-current="page"]::after { transform: scaleX(1); }
 .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
 .hero-meta strong { font-weight: 700; color: #fdfbf6; }
 
+/* ---------- Bannière vidéo d'ambiance (accueil) ---------- */
+.video-banner {
+  position: relative; min-height: min(60vh, 620px); overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.video-banner video {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+}
+.video-banner::after {
+  content: ""; position: absolute; inset: 0; background: rgba(20, 18, 15, 0.38);
+}
+.video-banner-content { position: relative; z-index: 2; text-align: center; color: #fdfbf6; padding: 0 32px; }
+.video-banner-content .eyebrow { color: #d9e2c9; justify-content: center; }
+.video-banner-content .eyebrow::before { background: #d9e2c9; }
+.video-banner-content h2 { color: #fdfbf6; font-size: clamp(1.9rem, 3.6vw, 2.9rem); }
+
 /* ---------- Page hero (interior pages) ---------- */
 .page-hero { padding: 76px 0 48px; }
 .page-hero h1 { font-size: clamp(2.2rem, 4.2vw, 3.2rem); }
