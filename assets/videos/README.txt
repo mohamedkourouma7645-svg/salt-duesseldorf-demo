@@ -1,0 +1,1 @@
+Vidéo optionnelle pour la galerie à déposer ici : assets/videos/<nom>.mp4 (référencée via config.gallery.video). Optimiser avant dépôt : ffmpeg -i source.mp4 -c:v libx264 -crf 23 -pix_fmt yuv420p -c:a aac -movflags +faststart <nom>.mp4

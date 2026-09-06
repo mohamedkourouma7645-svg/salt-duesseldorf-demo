@@ -476,6 +476,12 @@ blockquote.pull {
   .gallery-item .gallery-label { opacity: 1; }
 }
 
+/* ---------- Galerie : vidéo ---------- */
+.gallery-video {
+  display: block; width: 100%; max-width: 380px; margin: 0 auto;
+  border-radius: var(--radius-lg); box-shadow: var(--shadow); background: var(--bone-2);
+}
+
 /* ---------- Forms ---------- */
 .form-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 40px; }
 form .field { margin-bottom: 20px; }
