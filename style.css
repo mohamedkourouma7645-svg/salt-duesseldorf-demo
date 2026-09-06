@@ -366,27 +366,43 @@ section.block.alt { background: var(--bone-2); }
 .rating-badge { display: inline-flex; align-items: center; gap: 10px; }
 .rating-stars { color: var(--accent-deep); letter-spacing: 1px; }
 
-/* ---------- Bouton d'appel flottant ---------- */
+/* ---------- Bouton d'appel flottant (avec menu Anrufen / WhatsApp) ---------- */
+.phone-fab-wrap { position: fixed; right: 20px; bottom: 24px; z-index: 55; transition: bottom 0.3s var(--ease); }
 .phone-fab {
-  position: fixed; right: 20px; bottom: 24px; z-index: 55;
   display: inline-flex; align-items: center; gap: 8px;
-  background: var(--ink); color: var(--bone); border-radius: 999px;
+  background: var(--ink); color: var(--bone); border-radius: 999px; border: none;
   padding: 12px 18px 12px 14px; box-shadow: var(--shadow);
-  text-decoration: none; font-weight: 700; font-size: 0.86rem;
+  text-decoration: none; font-weight: 700; font-size: 0.86rem; font-family: inherit; cursor: pointer;
   min-height: 48px; touch-action: manipulation;
-  transition: transform 0.2s var(--ease), background 0.2s var(--ease), bottom 0.3s var(--ease);
+  transition: transform 0.2s var(--ease), background 0.2s var(--ease);
 }
 .phone-fab:hover { background: var(--accent-deep); transform: translateY(-2px); }
 .phone-fab svg { width: 20px; height: 20px; flex-shrink: 0; }
 /* Tant que le bandeau cookies est affiché, le bouton remonte au-dessus pour rester
    cliquable — sans ça, sur mobile où le bandeau prend deux-trois lignes, il resterait
    caché derrière au premier chargement, ce qui va à l'encontre de sa raison d'être. */
-body.cookie-banner-open .phone-fab { bottom: 104px; }
+body.cookie-banner-open .phone-fab-wrap { bottom: 104px; }
 @media (max-width: 560px) {
-  .phone-fab { right: 14px; padding: 12px; }
+  .phone-fab-wrap { right: 14px; }
+  .phone-fab { padding: 12px; }
   .phone-fab-label { display: none; }
-  body.cookie-banner-open .phone-fab { bottom: 210px; }
+  body.cookie-banner-open .phone-fab-wrap { bottom: 210px; }
 }
+
+.phone-fab-menu {
+  position: absolute; right: 0; bottom: calc(100% + 10px);
+  background: var(--surface); border-radius: var(--radius-lg); box-shadow: var(--shadow);
+  padding: 8px; display: flex; flex-direction: column; gap: 2px; min-width: 180px;
+}
+.phone-fab-menu[hidden] { display: none; }
+.phone-fab-menu-item {
+  display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: var(--radius);
+  color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.88rem;
+  min-height: 44px; touch-action: manipulation;
+  transition: background 0.15s var(--ease);
+}
+.phone-fab-menu-item:hover { background: var(--bone-2); }
+.phone-fab-menu-item svg { width: 19px; height: 19px; flex-shrink: 0; color: var(--accent-deep); }
 
 /* ---------- Cookie-Banner ---------- */
 .cookie-banner {

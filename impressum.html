@@ -7,7 +7,7 @@
 <meta name="description" content="Impressum — Salt..">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=202609060602">
+<link rel="stylesheet" href="style.css?v=202609060612">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
@@ -22,10 +22,22 @@
     <button type="button" class="btn btn-solid" id="cookie-accept">Akzeptieren</button>
   </div>
 </div>
-<a class="phone-fab" href="tel:+4915566310076" aria-label="Anrufen — +49 155 66310076">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 10.8a9 9 0 0 0 4.6 4.6l1.5-1.8a1 1 0 0 1 1.1-.3c1 .3 2 .5 3.1.5a1 1 0 0 1 1 1V18a1 1 0 0 1-1 1C10.4 19 3 11.6 3 3a1 1 0 0 1 1-1h3.9a1 1 0 0 1 1 1c0 1.1.2 2.1.5 3.1a1 1 0 0 1-.3 1.1z"/></svg>
-  <span class="phone-fab-label">Anrufen</span>
-</a>
+<div class="phone-fab-wrap">
+  <div class="phone-fab-menu" id="phone-fab-menu" hidden>
+    <a class="phone-fab-menu-item" href="tel:+4915566310076">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 10.8a9 9 0 0 0 4.6 4.6l1.5-1.8a1 1 0 0 1 1.1-.3c1 .3 2 .5 3.1.5a1 1 0 0 1 1 1V18a1 1 0 0 1-1 1C10.4 19 3 11.6 3 3a1 1 0 0 1 1-1h3.9a1 1 0 0 1 1 1c0 1.1.2 2.1.5 3.1a1 1 0 0 1-.3 1.1z"/></svg>
+      Anrufen
+    </a>
+    <a class="phone-fab-menu-item" href="https://wa.me/4915566310076" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M8.5 8.5c-.3.6-.5 1.3-.2 2.4.4 1.6 2.1 3.6 3.8 4.5 1.1.6 2 .6 2.6.4.5-.1 1.1-.6 1.3-1.1.1-.3.1-.6 0-.7-.1-.1-2-1-2.3-1.1-.2-.1-.4-.1-.6.1l-.5.6c-.1.2-.3.2-.5.1-.7-.3-1.9-1.1-2.4-2-.1-.2-.1-.4 0-.5l.4-.5c.1-.2.1-.4 0-.6-.1-.3-.6-1.5-.9-2-.2-.3-.4-.3-.6-.3h-.4c-.2 0-.4.1-.5.1z" fill="currentColor" stroke="none"/></svg>
+      WhatsApp
+    </a>
+  </div>
+  <button type="button" class="phone-fab" id="phone-fab-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Kontaktoptionen: Anrufen oder WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 10.8a9 9 0 0 0 4.6 4.6l1.5-1.8a1 1 0 0 1 1.1-.3c1 .3 2 .5 3.1.5a1 1 0 0 1 1 1V18a1 1 0 0 1-1 1C10.4 19 3 11.6 3 3a1 1 0 0 1 1-1h3.9a1 1 0 0 1 1 1c0 1.1.2 2.1.5 3.1a1 1 0 0 1-.3 1.1z"/></svg>
+    <span class="phone-fab-label">Anrufen</span>
+  </button>
+</div>
 <header class="site-header">
   <div class="nav-inner">
     <a class="brand-logo" href="index.html"><img src="assets/logo.svg" alt="Salt."></a>
@@ -101,7 +113,7 @@
 </footer>
 
 <script>window.SITE_I18N = {"msgRequired":"Dieses Feld wird benötigt.","msgInvalidEmail":"Bitte eine gültige E-Mail-Adresse eingeben.","contactConfirmTpl":"Danke, {name}. Ihre Nachricht wurde erfasst. Demo — es wird aktuell nichts versendet.","reservationConfirmTpl":"Danke, {name}. Reservierungsanfrage für {guests} Personen am {date} um {time} Uhr erfasst. Demo — es wird aktuell nichts versendet."};</script>
-<script src="script.js?v=202609060602"></script>
+<script src="script.js?v=202609060612"></script>
 <script type="module" src="components/index.js"></script>
 
 </body>

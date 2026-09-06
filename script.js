@@ -48,6 +48,34 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cookieDeclineBtn) cookieDeclineBtn.addEventListener('click', () => setCookieConsent('declined'));
   }
 
+  /* ---------- Bouton d'appel : menu Anrufen / WhatsApp ---------- */
+  const phoneFabToggle = document.getElementById('phone-fab-toggle');
+  const phoneFabMenu = document.getElementById('phone-fab-menu');
+  if (phoneFabToggle && phoneFabMenu) {
+    const closePhoneMenu = () => {
+      phoneFabMenu.hidden = true;
+      phoneFabToggle.setAttribute('aria-expanded', 'false');
+    };
+    phoneFabToggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = !phoneFabMenu.hidden;
+      if (isOpen) {
+        closePhoneMenu();
+      } else {
+        phoneFabMenu.hidden = false;
+        phoneFabToggle.setAttribute('aria-expanded', 'true');
+      }
+    });
+    document.addEventListener('click', (event) => {
+      if (!phoneFabMenu.hidden && !phoneFabMenu.contains(event.target) && event.target !== phoneFabToggle) {
+        closePhoneMenu();
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !phoneFabMenu.hidden) closePhoneMenu();
+    });
+  }
+
   /* ---------- Menu mobile ---------- */
   const toggle = document.querySelector('.nav-toggle');
   const navInner = document.querySelector('.nav-inner');
